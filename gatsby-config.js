@@ -10,7 +10,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
-    // Needs to be the first to work with gatsby-remark-images
+    // needs to be the first to work with gatsby-remark-images
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -50,6 +50,8 @@ module.exports = {
             },
           },
           `gatsby-remark-lazy-load`,
+          // needs to be the last plugin
+          `gatsby-remark-prismjs`,
         ],
       },
     },
