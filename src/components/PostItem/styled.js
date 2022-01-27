@@ -6,7 +6,7 @@ export const PostItemLink = styled(Link)``;
 export const PostItemWrapper = styled.section`
   display: flex;
   align-items: center;
-  padding: 2rem 2.5rem;
+  padding: 1.5rem 2rem;
   width: 100%;
   border-bottom: 2px solid;
   background: #ffffff10;
@@ -16,7 +16,7 @@ export const PostItemTag = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 1rem;
+  margin-right: 2rem;
   min-width: 5rem;
   height: 5rem;
   color: #fff;

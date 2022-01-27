@@ -17,6 +17,6 @@ export const Main = styled.main`
   width: calc(80% - 2.5rem);
   min-height: 100vh;
   border: 3px solid;
-  box-shadow: inset 0 0 10px #00000080;
+  box-shadow: inset 0 0 5px #00000060;
   background: #BDC696;
 `;
