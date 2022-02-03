@@ -8,7 +8,7 @@ export const BarWrapper = styled.aside`
   flex-direction: column;
   justify-content: space-between;
   padding: 10px 0;
-  width: 2.5rem;
+  width: 3rem;
   height: 100vh;
 `;
 
@@ -29,6 +29,7 @@ export const BarItem = styled.button`
   margin: .5rem 0;
   width: 60%;
   border: none;
+  background: none;
 `;
 
 export const Link = styled(GatsbyLink)`

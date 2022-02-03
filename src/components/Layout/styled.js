@@ -13,8 +13,9 @@ export const Main = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-right: 2.5rem;
-  width: calc(80% - 2.5rem);
+  margin-right: 3rem;
+  padding: 0 2.5rem;
+  width: calc(80% - 3rem);
   min-height: 100vh;
   border: 3px solid;
   box-shadow: inset 0 0 5px #00000060;
