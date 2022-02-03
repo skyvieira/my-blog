@@ -7,7 +7,8 @@ export const RecommendedWrapper = styled.section`
   justify-content: space-between;
   margin-top: 1rem;
   border-top: 2px solid;
-  background: #ffffff10;
+  border-bottom: 2px solid;
+  background: #ffffff30;
 `;
 
 export const RecommendedLink = styled(Link)`

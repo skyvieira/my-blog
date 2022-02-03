@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html {
+    overflow-y: overlay;
     scroll-behavior: smooth;
   }
 
@@ -18,6 +19,20 @@ const GlobalStyles = createGlobalStyle`
 
   li {
     list-style: none;
+  }
+
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: #888;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 `;
 
