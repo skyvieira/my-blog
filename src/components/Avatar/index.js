@@ -19,7 +19,7 @@ const Avatar = () => {
   const image = getImage(avatarImage);
 
   return (
-    <S.Avatar to='/'>
+    <S.Avatar>
       <GatsbyImage
         image={image}
         alt="avatar"
