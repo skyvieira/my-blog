@@ -19,7 +19,8 @@ export const BarGroup = styled.div`
   font-size: 1.2em;
   font-weight: 300;
 
-  button, a {
+  button,
+  a {
     text-align: center;
     cursor: pointer;
   }
@@ -28,8 +29,22 @@ export const BarGroup = styled.div`
 export const BarItem = styled.button`
   margin: .5rem 0;
   width: 60%;
+  color: var(--texts);
   border: none;
   background: none;
+  transition: .4s;
+
+  &.light {
+    color: #d4d400;
+
+    &:hover {
+      color: #e2e240;
+    }
+  }
+
+  &:hover {
+    color: var(--highlight);
+  }
 `;
 
 export const Link = styled(GatsbyLink)`

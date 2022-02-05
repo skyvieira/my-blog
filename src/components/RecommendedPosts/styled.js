@@ -8,7 +8,7 @@ export const RecommendedWrapper = styled.section`
   margin-top: 1rem;
   border-top: 2px solid;
   border-bottom: 2px solid;
-  background: #ffffff30;
+  background: #ffffff10;
 `;
 
 export const RecommendedLink = styled(Link)`
@@ -33,6 +33,6 @@ export const RecommendedLink = styled(Link)`
   }
 
   &:hover {
-    background: #ffffff50;
+    background: #ffffff20;
   }
 `;

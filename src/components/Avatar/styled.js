@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { Link } from "gatsby";
 
-export const Avatar = styled(Link)`
+export const Avatar = styled.figure`
   .image {
     border-radius: 50%;
-    border: 2px solid;
+    border: 2px solid var(--black);
   }
 `;
