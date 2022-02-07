@@ -19,7 +19,12 @@ export const Main = styled.main`
   padding: 0 2.5rem;
   width: calc(80% - 3rem);
   min-height: 100vh;
-  border: 3px solid var(--borders);
-  box-shadow: inset 0 0 5px #000;
+  box-shadow: inset 0 0 2px var(--black);
   background: var(--background);
+
+  body#grid & {
+    grid-template-areas:
+      "posts"
+      "pagination";
+  }
 `;
