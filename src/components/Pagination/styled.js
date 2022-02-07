@@ -6,8 +6,8 @@ export const PaginationWrapper = styled.section`
   justify-content: space-between;
   padding: 10px;
   text-align: center;
-  box-shadow: 0 0 2px #000;
-  border-top: 2px solid var(--black);
+  box-shadow: 0 0 2px var(--black);
+  border-top: 2px solid var(--borders);
   border-radius: 5px;
   background: #ffffff10;
   
