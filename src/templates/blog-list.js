@@ -1,13 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import styled from "styled-components";
+import * as S from "../components/ListWrapper/styled";
 import Layout from "../components/Layout";
 import SEO from "../components/seo";
 import PostItem from "../components/PostItem";
 import Pagination from "../components/Pagination";
-
-const PostsWrapper = styled.section``;
 
 const BlogList = props => {
   const postList = props.data.allMarkdownRemark.edges;
@@ -21,30 +19,31 @@ const BlogList = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      <PostsWrapper>
+      <S.ListWrapper>
         {postList.map(
-        (
-          {
-            node: {
-              frontmatter: { background, category, date, description, title },
-              timeToRead,
-              fields: { slug },
+          (
+            {
+              node: {
+                frontmatter: { background, category, date, description, title },
+                timeToRead,
+                fields: { slug },
+              },
             },
-          }, 
-          index
-        ) => (
-          <PostItem
-            key={index}
-            slug={slug}
-            background={background}
-            category={category}
-            date={date}
-            timeToRead={timeToRead}
-            title={title}
-            description={description}
-          />
-        ))}
-      </PostsWrapper>
+            index
+          ) => (
+            <PostItem
+              key={index}
+              slug={slug}
+              background={background}
+              category={category}
+              date={date}
+              timeToRead={timeToRead}
+              title={title}
+              description={description}
+            />
+          )
+        )}
+      </S.ListWrapper>
 
       <Pagination
         isFirst={isFirst}

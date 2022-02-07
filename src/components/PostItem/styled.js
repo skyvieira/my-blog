@@ -1,25 +1,34 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-export const PostItemLink = styled(Link)``;
+export const PostItemLink = styled(Link)`
+  display: flex;
+  margin: 12px 0;
+  box-shadow: 0 0 2px var(--black);
+  border-bottom: 2px solid var(--borders);
+  border-radius: 10px;
+  background: #ffffff10;
+`;
 
 export const PostItemWrapper = styled.section`
   display: flex;
   align-items: center;
-  margin: 8px 0;
-  padding: 1.2rem 2rem;
+  padding: 1rem 2rem .6rem;
   width: 100%;
-  box-shadow: 0 0 2px;
-  border-bottom: 2px solid #000;
-  border-radius: 10px;
-  background: #ffffff10;
+
+  body#grid & {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem;
+    border: none;
+  }
 `;
 
 export const PostItemTag = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 1.2rem;
+  margin: 0 1.2rem 5px 0;
   min-width: 4.5rem;
   height: 4.5rem;
   color: #fff;
@@ -43,12 +52,17 @@ export const PostItemDate = styled.time`
 `;
 
 export const PostItemTitle = styled.h1`
-  margin: 8px 0 5px;
+  margin: 8px 0 2px;
   font-size: 1.3em;
+
+  body#grid & {
+    line-height: 1.1;
+    margin: .8rem 0;
+  }
 `;
 
 export const PostItemDescription = styled.p`
-  margin: 0 10px;
+  margin-left: 10px;
   padding: 0 5px;
   font-weight: 100;
   border-left: 1px solid;

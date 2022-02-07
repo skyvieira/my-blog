@@ -1,17 +1,30 @@
 import React, { useState, useEffect } from "react";
 
 import * as S from "./styled";
-import { HomeAlt, SearchAlt, Adjust, ArrowToTop } from "@styled-icons/boxicons-regular";
-import { Grid } from "@styled-icons/bootstrap/Grid";
+import {
+  HomeAlt as Home,
+  SearchAlt as Search,
+  Adjust as Light,
+  ArrowToTop
+} from "@styled-icons/boxicons-regular";
+import {
+  Grid3x3GapFill as Grid,
+  ViewList as List
+} from "@styled-icons/bootstrap";
 
 const MenuBar = () => {
   const [theme, setTheme] = useState(null);
+  const [display, setDisplay] = useState(null);
 
   const isDarkMode = theme === 'dark';
+  const isListMode = display === 'list';
 
   useEffect(() => {
     setTheme(window.__theme);
+    setDisplay(window.__display);
+
     window.__onThemeChange = () => setTheme(window.__theme);
+    window.__onDisplayChange = () => setDisplay(window.__display);
   }, []);
 
   return (
@@ -19,12 +32,12 @@ const MenuBar = () => {
       <S.BarGroup>
         <S.Link to='/' title="Voltar para a Home">
           <S.BarItem>
-            <HomeAlt />
+            <Home />
           </S.BarItem>
         </S.Link>
         <S.Link to='/search' title="Pesquisar">
           <S.BarItem>
-            <SearchAlt />
+            <Search />
           </S.BarItem>
         </S.Link>
       </S.BarGroup>
@@ -37,10 +50,19 @@ const MenuBar = () => {
           }}
           className={theme}
         >
-          <Adjust />
+          <Light />
         </S.BarItem>
-        <S.BarItem title="Alterar visualização">
-          <Grid />
+        <S.BarItem
+          title="Alterar visualização"
+          onClick={() => {
+            window.__setPreferredDisplay(isListMode ? 'grid' : 'list')
+          }}
+          id={display}
+        >
+          {isListMode
+            ? <List />
+            : <Grid />
+          }
         </S.BarItem>
         <S.BarItem title="Voltar para o topo">
           <ArrowToTop />
