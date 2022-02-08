@@ -12,6 +12,10 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+  body {
+    font-family: sans-serif;
+  }
+
   body.dark {
     --borders: #38444d;
     --texts: #8899a6;

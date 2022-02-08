@@ -1,7 +1,12 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const SocialWrapper = styled.nav`
   margin: 1rem auto;
+
+  ${media.lessThan('large')`
+    display: none;
+  `}
 `;
 
 export const SocialList = styled.ul`
