@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const SidebarWrapper = styled.aside`
   position: fixed;
@@ -10,4 +11,13 @@ export const SidebarWrapper = styled.aside`
   width: 20%;
   height: 100%;
   text-align: center;
+  box-shadow: inset 0 0 2px var(--black);
+  background: var(--mediumBackground);
+
+  ${media.lessThan('large')`
+    align-items: flex-start;
+    padding: .5rem 3rem;
+    width: 100%;
+    height: auto;
+  `}
 `;

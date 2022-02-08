@@ -10,6 +10,8 @@ export const BarWrapper = styled.aside`
   padding: 10px 0;
   width: 3rem;
   height: 100vh;
+  box-shadow: inset 0 0 2px var(--black);
+  background: var(--mediumBackground);
 `;
 
 export const BarGroup = styled.div`

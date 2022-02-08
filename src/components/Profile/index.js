@@ -23,12 +23,14 @@ const Profile = () => {
 
   return (
     <S.ProfileWrapper>
-      <S.Info to='/'>
+      <S.Profile to='/'>
         <Avatar />
-        <S.Name>{title}</S.Name>
-        <S.Position>{position}</S.Position>
-      </S.Info>
-      <S.About>{description}</S.About>
+        <S.About>
+          <S.Name>{title}</S.Name>
+          <S.Position>{position}</S.Position>
+        </S.About>
+      </S.Profile>
+      <S.Description>{description}</S.Description>
     </S.ProfileWrapper>
   );
 };
