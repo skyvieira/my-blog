@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const SearchWrapper = styled.section`
   display: flex;
@@ -42,4 +43,9 @@ export const SearchWrapper = styled.section`
       height: 100%;
     }
   }
+
+  ${media.lessThan('large')`
+    margin-top: 1rem;
+    width: 95%;
+  `}
 `;

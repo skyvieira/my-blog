@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 import { Link as GatsbyLink } from "gatsby";
 
 export const BarWrapper = styled.aside`
@@ -12,6 +13,14 @@ export const BarWrapper = styled.aside`
   height: 100vh;
   box-shadow: inset 0 0 2px var(--black);
   background: var(--mediumBackground);
+  z-index: 2;
+
+  ${media.lessThan('large')`
+    bottom: 0;
+    flex-direction: row;
+    width: 100%;
+    height: 3rem;
+  `}
 `;
 
 export const BarGroup = styled.div`
@@ -26,6 +35,14 @@ export const BarGroup = styled.div`
     text-align: center;
     cursor: pointer;
   }
+
+  ${media.lessThan('large')`
+    flex-direction: row;
+
+    #list {
+      display: none;
+    }
+  `}
 `;
 
 export const BarItem = styled.button`
@@ -47,6 +64,11 @@ export const BarItem = styled.button`
   &:hover {
     color: var(--highlight);
   }
+
+  ${media.lessThan('large')`
+    margin: .5rem;
+    width: 1.5rem;
+  `}
 `;
 
 export const Link = styled(GatsbyLink)`
