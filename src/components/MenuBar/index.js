@@ -64,7 +64,7 @@ const MenuBar = () => {
             : <Grid />
           }
         </S.BarItem>
-        <S.BarItem title="Voltar para o topo">
+        <S.BarItem onClick={() => window.scrollTo(0, 0)} title="Voltar para o topo">
           <ArrowToTop />
         </S.BarItem>
       </S.BarGroup>

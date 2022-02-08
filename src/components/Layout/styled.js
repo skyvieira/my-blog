@@ -28,8 +28,9 @@ export const Main = styled.main`
   }
 
   ${media.lessThan('large')`
-    padding: 5rem 1rem 0;
-    width: calc(100% - 3rem);
+    margin: 0;
+    padding: 5rem 1rem 3rem;
+    width: 100%;
     font-size: .85rem;
   `}
 `;
