@@ -14,6 +14,7 @@ export const SearchWrapper = styled.section`
     padding: 5px 10px;
     width: 100%;
     height: 3rem;
+    color: var(--texts);
     font-size: 1.2em;
     border: none;
     background: none;

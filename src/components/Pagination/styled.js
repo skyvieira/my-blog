@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const PaginationWrapper = styled.section`
   display: flex;
@@ -12,6 +13,10 @@ export const PaginationWrapper = styled.section`
   background: #ffffff10;
   
   & > * {
-    width: 15%;
+    width: 25%;
   }
+
+  ${media.lessThan('large')`
+    font-size: .9em;
+  `}
 `;

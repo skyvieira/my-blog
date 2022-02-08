@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 import { Link } from "gatsby";
 
 export const ProfileWrapper = styled.div`
@@ -8,18 +9,36 @@ export const ProfileWrapper = styled.div`
   text-align: center;
 `;
 
-export const Info = styled(Link)``;
+export const Profile = styled(Link)`
+  ${media.lessThan('large')`
+    display: flex;
+    font-size: .8rem;
+    text-align: left;
+  `}
+`;
+
+export const About = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 
 export const Name = styled.h1`
   padding-top: 5px;
-  font-size: 1.3em;
+  font-size: 1.4em;
 `;
 
 export const Position = styled.h2`
   font-size: 1.1em;
+  font-weight: 500;
 `;
 
-export const About = styled.p`
+export const Description = styled.p`
   padding: 1.5rem 0 1rem;
   width: 80%;
+  font-weight: 100;
+
+  ${media.lessThan('large')`
+    display: none;
+  `}
 `;

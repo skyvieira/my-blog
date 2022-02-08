@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 import { Link } from "gatsby";
 
 export const PostItemLink = styled(Link)`
@@ -13,7 +14,7 @@ export const PostItemLink = styled(Link)`
 export const PostItemWrapper = styled.section`
   display: flex;
   align-items: center;
-  padding: 1rem 2rem .6rem;
+  padding: .8rem 2rem;
   width: 100%;
 
   body#grid & {
@@ -22,6 +23,12 @@ export const PostItemWrapper = styled.section`
     padding: 2rem 1rem;
     border: none;
   }
+
+  ${media.lessThan('large')`
+    flex-direction: column;
+    align-items: flex-start;
+    padding: .8rem 1.5rem;
+  `}
 `;
 
 export const PostItemTag = styled.div`
@@ -38,6 +45,12 @@ export const PostItemTag = styled.div`
   border: 2px solid var(--black);
   text-shadow: 0 0 2px;
   background: ${props => props.background || '#333'};
+
+  ${media.lessThan('large')`
+    height: auto;
+    font-size: .9em;
+    border-radius: 4px;
+  `}
 `;
 
 export const PostItemInfo = styled.div``;
@@ -47,13 +60,13 @@ export const PostItemDate = styled.time`
   color: var(--texts);
   font-size: .8em;
   font-weight: 100;
-  letter-spacing: .4px;
+  letter-spacing: .5px;
   background: #00000020;
 `;
 
 export const PostItemTitle = styled.h1`
-  margin: 8px 0 2px;
-  font-size: 1.3em;
+  margin: 10px 0 5px;
+  font-size: 1.35em;
 
   body#grid & {
     line-height: 1.1;
@@ -62,8 +75,8 @@ export const PostItemTitle = styled.h1`
 `;
 
 export const PostItemDescription = styled.p`
-  margin-left: 10px;
-  padding: 0 5px;
+  margin-left: 5px;
+  padding-left: 5px;
   font-weight: 100;
   border-left: 1px solid;
 `;

@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const Wrapper = styled.section`
   display: flex;
   justify-content: end;
   color: var(--texts);
-  background: var(--mediumBackground);
+  background: var(--background);
 
   // background: #0f0c29;
   // background: -webkit-linear-gradient(to left, #24243e, #302b63, #0f0c29);
@@ -19,12 +20,16 @@ export const Main = styled.main`
   padding: 0 2.5rem;
   width: calc(80% - 3rem);
   min-height: 100vh;
-  box-shadow: inset 0 0 2px var(--black);
-  background: var(--background);
 
   body#grid & {
     grid-template-areas:
       "posts"
       "pagination";
   }
+
+  ${media.lessThan('large')`
+    padding: 5rem 1rem 0;
+    width: calc(100% - 3rem);
+    font-size: .85rem;
+  `}
 `;
