@@ -23,7 +23,13 @@ const Profile = () => {
 
   return (
     <S.ProfileWrapper>
-      <S.Profile to='/'>
+      <S.Profile
+        to='/'
+        cover
+        direction='left'
+        bg='#16202c'
+        duration={0.6}
+      >
         <Avatar />
         <S.About>
           <S.Name>{title}</S.Name>

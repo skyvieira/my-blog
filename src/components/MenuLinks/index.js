@@ -8,7 +8,13 @@ const MenuLinks = () => (
     <S.LinkList>
       {links.map((link, i) => (
         <S.LinkItem key={i}>
-          <S.Link to={link.url}>
+          <S.Link
+            to={link.url}
+            cover
+            direction='left'
+            bg='#16202c'
+            duration={0.6}
+          >
             {link.label}
           </S.Link>
         </S.LinkItem>

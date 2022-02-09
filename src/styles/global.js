@@ -41,10 +41,14 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     color: var(--texts);
-    transition: .2s;
+    transition: hover .2s;
 
     &:hover {
       color: var(--highlight);
+    }
+
+    &:active {
+      filter: brightness(.8);
     }
   }
 

@@ -17,10 +17,7 @@ export const PostTitle = styled.h1`
   padding: 1.5rem 0 .8rem;
   font-size: 4em;
   font-weight: 800;
-
-  ${media.lessThan('large')`
-    line-height: 1.3;
-  `}
+  line-height: 1.3;
 `;
 
 export const PostDescription = styled.h2`
@@ -54,6 +51,19 @@ export const Content = styled.section`
     ${media.lessThan('large')`
       font-size: .7rem;
     `}
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  a {
+    color: var(--highlight);
+    transition: .4s;
+
+    &:hover {
+      filter: hue-rotate(90deg);
+    }
   }
 
   .gatsby-resp-image-wrapper {

@@ -13,7 +13,6 @@ export const SocialList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  list-style: none;
 `;
 
 export const SocialItem = styled.li`
