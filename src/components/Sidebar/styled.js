@@ -8,7 +8,7 @@ export const SidebarWrapper = styled.aside`
   flex-direction: column;
   align-items: center;
   padding: 3rem 10px;
-  width: 20%;
+  width: 15%;
   height: 100%;
   text-align: center;
   box-shadow: inset 0 0 2px var(--black);

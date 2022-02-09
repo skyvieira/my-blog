@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export const ProfileWrapper = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const ProfileWrapper = styled.div`
   text-align: center;
 `;
 
-export const Profile = styled(Link)`
+export const Profile = styled(AniLink)`
   ${media.lessThan('large')`
     display: flex;
     font-size: .8rem;

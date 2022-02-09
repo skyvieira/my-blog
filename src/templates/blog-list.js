@@ -13,8 +13,8 @@ const BlogList = props => {
   const { currentPage, numPages } = props.pageContext;
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
-  const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`
-  const nextPage = `/page/${currentPage + 1}`
+  const prevPage = currentPage - 1 === 1 ? '/' : `/page/${currentPage - 1}`;
+  const nextPage = `/page/${currentPage + 1}`;
 
   return (
     <Layout>
