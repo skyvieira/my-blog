@@ -1,5 +1,5 @@
 import * as React from "react";
-import TransitionPortal from "gatsby-plugin-transition-link";
+import { TransitionPortal } from "gatsby-plugin-transition-link";
 import PropTypes from "prop-types";
 
 import * as S from "./styled";
