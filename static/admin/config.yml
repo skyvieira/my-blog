@@ -1,0 +1,9 @@
+backend:
+  name: github
+  repo: liviavieira/my-blog
+  branch: master
+  site_domain: https://liviamyblog.netlify.app
+
+publish_mode: editorial_workflow
+media_folder: 'static/assets/img'
+public_folder: 'assets/img'
