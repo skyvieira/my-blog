@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 import * as S from "./styled";
+import getThemeColor from "../../utils/getThemeColor";
 import Avatar from "../Avatar";
 
 const Profile = () => {
@@ -27,7 +28,7 @@ const Profile = () => {
         to='/'
         cover
         direction='left'
-        bg='#16202c'
+        bg={getThemeColor()}
         duration={0.6}
       >
         <Avatar />
