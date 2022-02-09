@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import * as S from "./styled";
+import getThemeColor from "../../utils/getThemeColor";
 import {
   HomeAlt as Home,
   SearchAlt as Search,
@@ -34,7 +35,7 @@ const MenuBar = () => {
           to='/'
           cover
           direction='right'
-          bg='#16202c'
+          bg={getThemeColor()}
           duration={0.6}
           title="Voltar para a Home"
         >
@@ -46,7 +47,7 @@ const MenuBar = () => {
           to='/search'
           cover
           direction='right'
-          bg='#16202c'
+          bg={getThemeColor()}
           duration={0.6}
           title="Pesquisar"
         >

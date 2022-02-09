@@ -38,7 +38,7 @@ const GlobalStyles = createGlobalStyle`
     --black: #222;
   }
 
-  a {
+  a[href] {
     text-decoration: none;
     color: var(--texts);
     transition: hover .2s;
@@ -48,7 +48,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     &:active {
-      filter: brightness(.8);
+      filter: brightness(0.8);
     }
   }
 
