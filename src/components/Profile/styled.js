@@ -37,6 +37,7 @@ export const Description = styled.p`
   padding: 1.5rem 0 1rem;
   width: 80%;
   font-weight: 100;
+  color: var(--texts);
 
   ${media.lessThan('large')`
     display: none;
