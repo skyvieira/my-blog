@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import { Link as GatsbyLink } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export const LinkWrapper = styled.nav`
   ${media.lessThan('large')`
@@ -13,7 +13,7 @@ export const LinkList = styled.ul`
   font-weight: 300;
 `;
 
-export const Link = styled(GatsbyLink)`
+export const Link = styled(AniLink)`
   text-decoration: none;
 `;
 

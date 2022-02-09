@@ -30,12 +30,26 @@ const MenuBar = () => {
   return (
     <S.BarWrapper>
       <S.BarGroup>
-        <S.Link to='/' title="Voltar para a Home">
+        <S.Link
+          to='/'
+          cover
+          direction='right'
+          bg='#16202c'
+          duration={0.6}
+          title="Voltar para a Home"
+        >
           <S.BarItem>
             <Home />
           </S.BarItem>
         </S.Link>
-        <S.Link to='/search' title="Pesquisar">
+        <S.Link
+          to='/search'
+          cover
+          direction='right'
+          bg='#16202c'
+          duration={0.6}
+          title="Pesquisar"
+        >
           <S.BarItem>
             <Search />
           </S.BarItem>

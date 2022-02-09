@@ -17,8 +17,8 @@ export const Main = styled.main`
   flex-direction: column;
   justify-content: space-between;
   margin-right: 3rem;
-  padding: 0 2.5rem;
-  width: calc(80% - 3rem);
+  padding: 0 3rem;
+  width: calc(85% - 3rem);
   min-height: 100vh;
 
   body#grid & {

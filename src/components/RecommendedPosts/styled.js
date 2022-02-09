@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export const RecommendedWrapper = styled.section`
   display: flex;
@@ -12,7 +12,7 @@ export const RecommendedWrapper = styled.section`
   background: #00000010;
 `;
 
-export const RecommendedLink = styled(Link)`
+export const RecommendedLink = styled(AniLink)`
   padding: 2rem 1.5rem;
   width: 50%;
   font-size: 1.1em;

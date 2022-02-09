@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import { Link as GatsbyLink } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export const BarWrapper = styled.aside`
   position: fixed;
@@ -71,7 +71,7 @@ export const BarItem = styled.button`
   `}
 `;
 
-export const Link = styled(GatsbyLink)`
+export const Link = styled(AniLink)`
   width: 100%;
   text-decoration: none;
 `;
