@@ -36,11 +36,11 @@ const PostItem = ({
 PostItem.propTypes = {
   slug: PropTypes.string.isRequired,
   background: PropTypes.string,
-  tag: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  timeToRead: PropTypes.string.isRequired,
+  timeToRead: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
 };
 
 export default PostItem

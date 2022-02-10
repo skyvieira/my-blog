@@ -44,7 +44,7 @@ const MenuBar = () => {
           </S.BarItem>
         </S.Link>
         <S.Link
-          to='/search'
+          to='/search/'
           cover
           direction='right'
           bg={getThemeColor()}

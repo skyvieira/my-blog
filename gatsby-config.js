@@ -7,14 +7,13 @@ module.exports = {
     title: `Livia Vieira`,
     position: `Front-End Developer`,
     description: `A blog about frontend development and other cool stuff.`,
-    author: `@gatsbyjs`,
+    author: `@myblog`,
     siteUrl: `https://liviamyblog.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
     // needs to be the first to work with gatsby-remark-images
     {
       resolve: `gatsby-source-filesystem`,
@@ -60,16 +59,17 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-algolia`,
+      resolve: `gatsby-plugin-algolia-search`,
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
         indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-        queries: require("./src/utils/algolia_queries"),
-        chunkSize: 10000,
+        queries,
+        chunkSize: 10000, // default: 1000
         enablePartialUpdates: true,
       },
     },
@@ -90,7 +90,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify-cms`,
   ],
 }
