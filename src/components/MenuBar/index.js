@@ -7,11 +7,11 @@ import {
   SearchAlt as Search,
   Adjust as Light,
   ArrowToTop
-} from "@styled-icons/boxicons-regular";
+} from "styled-icons/boxicons-regular";
 import {
   Grid3x3GapFill as Grid,
   ViewList as List
-} from "@styled-icons/bootstrap";
+} from "styled-icons/bootstrap";
 
 const MenuBar = () => {
   const [theme, setTheme] = useState(null);
